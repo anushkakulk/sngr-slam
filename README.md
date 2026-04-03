@@ -52,7 +52,7 @@ python experiments/plot_results.py
 
 **Run validation experiments:**
 ```bash
-python experiments/test_full.py
+python experiments/test_detector_pipeline.py
 ```
 
 **Quick iSAM2 sanity check:**
