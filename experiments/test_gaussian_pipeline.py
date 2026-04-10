@@ -13,7 +13,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
 
 import numpy as np
 from evaluate import trigger_precision_recall
-from run import run
+from run_gaussian_slam_baseline import run
 
 
 # Experiment 1: Tau sensitivity sweep

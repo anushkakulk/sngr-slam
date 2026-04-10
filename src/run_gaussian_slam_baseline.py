@@ -3,8 +3,8 @@ import time
 
 from data_gen import build_scenario
 from gaussian_slam import GaussianSLAM, X, L
-from detector import score_all_windows
-from refinement import refine_window
+from covariance_condition_number_detector import score_all_windows
+from importance_sampling_refinement import refine_window
 from evaluate import pose_rmse, trigger_precision_recall, nees
 
 

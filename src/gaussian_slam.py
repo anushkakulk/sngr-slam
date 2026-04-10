@@ -5,8 +5,10 @@ import numpy as np
 X = sb.X  # robot pose symbols
 L = sb.L  # landmark symbols
 
-PRIOR_NOISE = gtsam.noiseModel.Diagonal.Sigmas(np.array([0.1, 0.1, 0.01]))
-ODOM_NOISE = gtsam.noiseModel.Diagonal.Sigmas(np.array([0.1, 0.1, 0.05]))
+# PRIOR_NOISE = gtsam.noiseModel.Diagonal.Sigmas(np.array([0.1, 0.1, 0.01]))
+# ODOM_NOISE = gtsam.noiseModel.Diagonal.Sigmas(np.array([0.1, 0.1, 0.05]))
+PRIOR_SIGMA = np.array([0.1, 0.1, 0.01])
+ODOM_SIGMA = np.array([0.1, 0.1, 0.05])
 
 
 def build_range_noise(sigma):
@@ -28,7 +30,9 @@ class GaussianSLAM:
         graph = gtsam.NonlinearFactorGraph()
         values = gtsam.Values()
         pose0 = gtsam.Pose2(*first_pose)
-        graph.push_back(gtsam.PriorFactorPose2(X(0), pose0, PRIOR_NOISE))
+        # graph.push_back(gtsam.PriorFactorPose2(X(0), pose0, PRIOR_NOISE))
+        prior_noise = gtsam.noiseModel.Diagonal.Sigmas(PRIOR_SIGMA)
+        graph.push_back(gtsam.PriorFactorPose2(X(0), pose0, prior_noise))
         values.insert(X(0), pose0)
         self.isam.update(graph, values)
         self._prev_pose = pose0
@@ -40,8 +44,8 @@ class GaussianSLAM:
         values = gtsam.Values()
 
         rel = gtsam.Pose2(*odom)
-        graph.push_back(gtsam.BetweenFactorPose2(X(t - 1), X(t), rel, ODOM_NOISE))
-
+        odom_noise = gtsam.noiseModel.Diagonal.Sigmas(ODOM_SIGMA)
+        graph.push_back(gtsam.BetweenFactorPose2(X(t - 1), X(t), rel, odom_noise))
         prev = self.isam.calculateEstimate().atPose2(X(t - 1))
         new_pose = prev.compose(rel)
         values.insert(X(t), new_pose)
@@ -50,11 +54,11 @@ class GaussianSLAM:
         for k, r_meas in range_meas_at_t:
             self._lm_obs_count[k] = self._lm_obs_count.get(k, 0) + 1
 
-            if self._lm_obs_count[k] == 3:
+            if k not in self._initialised_lm:
                 lm_pt = gtsam.Point2(*lm_init_guess[k])
                 values.insert(L(k), lm_pt)
                 self._initialised_lm.add(k)
-                # weak prior to keep landmark constrained
+
                 lm_noise = gtsam.noiseModel.Isotropic.Sigma(2, 5.0)
                 graph.push_back(gtsam.PriorFactorPoint2(L(k), lm_pt, lm_noise))
 
