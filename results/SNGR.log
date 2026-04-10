@@ -1,0 +1,245 @@
+(sngr) anushkakulkarni@Anushkas-MacBook-Pro selective_non_gaussian_refinement_SLAM % python src/run2.py 
+=== Experiment 1: wrong data association (outlier noise) ===
+Score range: min=3.540  max=4.392  mean=3.794
+[refinement] window ['x15', 'x16', 'x17'] | MAP logprob = -30.5661
++100 | eff(%): 12.026 | logl*:   -inf< -30.9<   inf | logz:  -36.9+/-0.2 | dlogz:    0.0>   0.5                                                [refinement] done | 770 samples | ESS=396.5 | logZ = -36.87 ± 0.34 | MAP Δlogp = -0.364
+  Window 15: 10.11s | 770 samples | Δlogp=-0.038 | kept MAP
+[refinement] window ['x16', 'x17', 'x18'] | MAP logprob = -30.5661
++100 | eff(%): 11.845 | logl*:   -inf< -30.8<   inf | logz:  -37.6+/-0.2 | dlogz:    0.0>   0.5                                                [refinement] done | 854 samples | ESS=420.7 | logZ = -37.57 ± 0.37 | MAP Δlogp = -0.204
+  Window 16: 11.83s | 854 samples | Δlogp=-0.006 | kept MAP
+[refinement] window ['x17', 'x18', 'x19'] | MAP logprob = -30.5661
++100 | eff(%): 11.800 | logl*:   -inf< -30.8<   inf | logz:  -37.0+/-0.2 | dlogz:    0.0>   0.5                                                [refinement] done | 797 samples | ESS=439.3 | logZ = -36.99 ± 0.34 | MAP Δlogp = -0.194
+  Window 17: 11.13s | 797 samples | Δlogp=-0.010 | kept MAP
+[refinement] window ['x18', 'x19', 'x20'] | MAP logprob = -30.5661
++100 | eff(%): 11.737 | logl*:   -inf< -31.0<   inf | logz:  -37.1+/-0.2 | dlogz:    0.0>   0.5                                                [refinement] done | 785 samples | ESS=394.8 | logZ = -37.05 ± 0.35 | MAP Δlogp = -0.402
+  Window 18: 11.17s | 785 samples | Δlogp=-0.035 | kept MAP
+
+noise=0.0
+Pose RMSE:      0.1258 m
+Landmark RMSE:  0.1041 m
+Mean NEES:      0.356  (consistent ≈ 2.0)
+Triggers:       4 / 28
+True failures:  0 / 28
+Precision:      0.000
+Recall:         N/A
+Gaussian SLAM:  0.018s
+Refinement:     44.25s total | 11.06s/window | 4 windows
+Total:          44.26s
+Score range: min=3.532  max=4.301  mean=3.751
+
+noise=0.1
+Pose RMSE:      2.8068 m
+Landmark RMSE:  3.3066 m
+Mean NEES:      148.522  (consistent ≈ 2.0)
+Triggers:       0 / 28
+True failures:  25 / 28
+Precision:      N/A
+Recall:         0.000
+Gaussian SLAM:  0.016s
+Refinement:     0.00s (no triggers)
+Total:          0.02s
+Score range: min=3.655  max=4.402  mean=3.900
+[refinement] window ['x12', 'x13', 'x14'] | MAP logprob = -12294.4522
++100 | eff(%): 12.168 | logl*:   -inf<-12293.7<   inf | logz: -12299.3+/-0.2 | dlogz:    0.0>   0.5                                            [refinement] done | 728 samples | ESS=425.6 | logZ = -12299.26 ± 0.33 | MAP Δlogp = +0.722
+  Window 12: 10.80s | 728 samples | Δlogp=+1.220 | queued
+[refinement] window ['x13', 'x14', 'x15'] | MAP logprob = -12294.4522
++100 | eff(%): 11.948 | logl*:   -inf<-12293.2<   inf | logz: -12299.5+/-0.2 | dlogz:    0.0>   0.5                                            [refinement] done | 804 samples | ESS=416.3 | logZ = -12299.46 ± 0.35 | MAP Δlogp = +1.285
+  Window 13: 13.06s | 804 samples | Δlogp=+1.538 | queued
+[refinement] window ['x14', 'x15', 'x16'] | MAP logprob = -12294.4522
++100 | eff(%): 12.078 | logl*:   -inf<-12293.5<   inf | logz: -12299.0+/-0.2 | dlogz:    0.0>   0.5                                            [refinement] done | 737 samples | ESS=388.0 | logZ = -12299.04 ± 0.34 | MAP Δlogp = +0.992
+  Window 14: 12.48s | 737 samples | Δlogp=+1.435 | queued
+[refinement] window ['x15', 'x16', 'x17'] | MAP logprob = -12294.4522
++100 | eff(%): 11.700 | logl*:   -inf<-12293.3<   inf | logz: -12299.6+/-0.2 | dlogz:    0.0>   0.5                                            [refinement] done | 810 samples | ESS=440.1 | logZ = -12299.64 ± 0.35 | MAP Δlogp = +1.169
+  Window 15: 13.69s | 810 samples | Δlogp=+1.216 | queued
+[refinement] window ['x16', 'x17', 'x18'] | MAP logprob = -12294.4522
++100 | eff(%): 11.561 | logl*:   -inf<-12292.6<   inf | logz: -12299.5+/-0.2 | dlogz:    0.0>   0.5                                            [refinement] done | 866 samples | ESS=475.8 | logZ = -12299.51 ± 0.36 | MAP Δlogp = +1.870
+  Window 16: 12.32s | 866 samples | Δlogp=+1.876 | queued
+[refinement] window ['x17', 'x18', 'x19'] | MAP logprob = -12294.4522
++100 | eff(%): 11.694 | logl*:   -inf<-12288.6<   inf | logz: -12296.9+/-0.3 | dlogz:    0.0>   0.5                                            [refinement] done | 998 samples | ESS=527.2 | logZ = -12296.88 ± 0.40 | MAP Δlogp = +5.842
+  Window 17: 13.64s | 998 samples | Δlogp=+5.277 | queued
+[refinement] window ['x18', 'x19', 'x20'] | MAP logprob = -12294.4522
++100 | eff(%): 11.857 | logl*:   -inf<-12289.4<   inf | logz: -12297.6+/-0.3 | dlogz:    0.0>   0.5                                            [refinement] done | 982 samples | ESS=582.6 | logZ = -12297.55 ± 0.37 | MAP Δlogp = +5.052
+  Window 18: 13.87s | 982 samples | Δlogp=+4.147 | queued
+[refinement] window ['x19', 'x20', 'x21'] | MAP logprob = -12294.4522
++100 | eff(%): 11.727 | logl*:   -inf<-12290.6<   inf | logz: -12298.8+/-0.3 | dlogz:    0.0>   0.5                                            [refinement] done | 998 samples | ESS=512.8 | logZ = -12298.83 ± 0.40 | MAP Δlogp = +3.900
+  Window 19: 13.55s | 998 samples | Δlogp=+3.154 | queued
+[refinement] window ['x20', 'x21', 'x22'] | MAP logprob = -12294.4522
++100 | eff(%): 11.862 | logl*:   -inf<-12293.1<   inf | logz: -12300.3+/-0.3 | dlogz:    0.0>   0.5                                            [refinement] done | 885 samples | ESS=513.3 | logZ = -12300.28 ± 0.36 | MAP Δlogp = +1.333
+  Window 20: 12.77s | 885 samples | Δlogp=+0.991 | queued
+[refinement] window ['x21', 'x22', 'x23'] | MAP logprob = -12294.4522
++100 | eff(%): 12.085 | logl*:   -inf<-12293.5<   inf | logz: -12299.2+/-0.2 | dlogz:    0.0>   0.5                                            [refinement] done | 750 samples | ESS=411.0 | logZ = -12299.20 ± 0.34 | MAP Δlogp = +0.963
+  Window 21: 11.43s | 750 samples | Δlogp=+1.406 | queued
+[refinement] window ['x22', 'x23', 'x24'] | MAP logprob = -12294.4522
++100 | eff(%): 11.428 | logl*:   -inf<-12292.6<   inf | logz: -12299.3+/-0.2 | dlogz:    0.0>   0.5                                            [refinement] done | 841 samples | ESS=439.7 | logZ = -12299.33 ± 0.35 | MAP Δlogp = +1.813
+  Window 22: 12.54s | 841 samples | Δlogp=+2.051 | queued
+[refinement] window ['x23', 'x24', 'x25'] | MAP logprob = -12294.4522
++100 | eff(%): 11.899 | logl*:   -inf<-12293.0<   inf | logz: -12299.3+/-0.2 | dlogz:    0.0>   0.5                                            [refinement] done | 804 samples | ESS=417.7 | logZ = -12299.31 ± 0.35 | MAP Δlogp = +1.446
+  Window 23: 10.83s | 804 samples | Δlogp=+1.677 | queued
+[refinement] window ['x24', 'x25', 'x26'] | MAP logprob = -12294.4522
++100 | eff(%): 11.852 | logl*:   -inf<-12293.3<   inf | logz: -12300.3+/-0.2 | dlogz:    0.0>   0.5                                            [refinement] done | 873 samples | ESS=455.2 | logZ = -12300.30 ± 0.37 | MAP Δlogp = +1.137
+  Window 24: 11.48s | 873 samples | Δlogp=+1.357 | queued
+[refinement] window ['x25', 'x26', 'x27'] | MAP logprob = -12294.4522
++100 | eff(%): 11.801 | logl*:   -inf<-12291.1<   inf | logz: -12299.1+/-0.3 | dlogz:    0.0>   0.5                                            [refinement] done | 962 samples | ESS=547.9 | logZ = -12299.10 ± 0.36 | MAP Δlogp = +3.310
+  Window 25: 12.45s | 962 samples | Δlogp=+2.405 | queued
+
+noise=0.2
+Pose RMSE:      2.6477 m
+Landmark RMSE:  2.2989 m
+Mean NEES:      209.876  (consistent ≈ 2.0)
+Triggers:       14 / 28
+True failures:  26 / 28
+Precision:      1.000
+Recall:         0.538
+Gaussian SLAM:  0.018s
+Refinement:     174.90s total | 12.49s/window | 14 windows
+Total:          174.92s
+Score range: min=3.757  max=4.416  mean=3.963
+[refinement] window ['x6', 'x7', 'x8'] | MAP logprob = -12734.8168
++100 | eff(%): 11.694 | logl*:   -inf<-12733.1<   inf | logz: -12739.8+/-0.2 | dlogz:    0.0>   0.5                                            [refinement] done | 831 samples | ESS=461.3 | logZ = -12739.76 ± 0.33 | MAP Δlogp = +1.683
+  Window 6: 11.47s | 831 samples | Δlogp=+1.457 | queued
+[refinement] window ['x7', 'x8', 'x9'] | MAP logprob = -12734.8168
++100 | eff(%): 11.869 | logl*:   -inf<-12733.3<   inf | logz: -12739.8+/-0.2 | dlogz:    0.0>   0.5                                            [refinement] done | 818 samples | ESS=453.4 | logZ = -12739.80 ± 0.33 | MAP Δlogp = +1.504
+  Window 7: 10.70s | 818 samples | Δlogp=+1.312 | queued
+[refinement] window ['x8', 'x9', 'x10'] | MAP logprob = -12734.8168
++100 | eff(%): 11.828 | logl*:   -inf<-12734.4<   inf | logz: -12740.5+/-0.2 | dlogz:    0.0>   0.5                                            [refinement] done | 781 samples | ESS=422.2 | logZ = -12740.50 ± 0.34 | MAP Δlogp = +0.374
+  Window 8: 11.19s | 781 samples | Δlogp=+0.453 | queued
+[refinement] window ['x9', 'x10', 'x11'] | MAP logprob = -12734.8168
++100 | eff(%): 11.939 | logl*:   -inf<-12734.3<   inf | logz: -12740.6+/-0.2 | dlogz:    0.0>   0.5                                            [refinement] done | 803 samples | ESS=440.2 | logZ = -12740.64 ± 0.34 | MAP Δlogp = +0.473
+  Window 9: 10.71s | 803 samples | Δlogp=+0.835 | queued
+[refinement] window ['x10', 'x11', 'x12'] | MAP logprob = -12734.8168
++100 | eff(%): 12.043 | logl*:   -inf<-12734.2<   inf | logz: -12740.4+/-0.2 | dlogz:    0.0>   0.5                                            [refinement] done | 794 samples | ESS=452.1 | logZ = -12740.44 ± 0.33 | MAP Δlogp = +0.605
+  Window 10: 12.28s | 794 samples | Δlogp=+0.681 | queued
+[refinement] window ['x11', 'x12', 'x13'] | MAP logprob = -12734.8168
++100 | eff(%): 11.903 | logl*:   -inf<-12734.0<   inf | logz: -12740.7+/-0.2 | dlogz:    0.0>   0.5                                            [refinement] done | 843 samples | ESS=450.2 | logZ = -12740.71 ± 0.36 | MAP Δlogp = +0.808
+  Window 11: 13.51s | 843 samples | Δlogp=+0.906 | queued
+[refinement] window ['x12', 'x13', 'x14'] | MAP logprob = -12734.8168
++100 | eff(%): 11.917 | logl*:   -inf<-12734.3<   inf | logz: -12740.8+/-0.2 | dlogz:    0.0>   0.5                                            [refinement] done | 820 samples | ESS=445.5 | logZ = -12740.79 ± 0.35 | MAP Δlogp = +0.479
+  Window 12: 13.22s | 820 samples | Δlogp=+0.519 | queued
+[refinement] window ['x13', 'x14', 'x15'] | MAP logprob = -12734.8168
++100 | eff(%): 11.834 | logl*:   -inf<-12732.7<   inf | logz: -12739.3+/-0.2 | dlogz:    0.0>   0.5                                            [refinement] done | 833 samples | ESS=446.8 | logZ = -12739.31 ± 0.34 | MAP Δlogp = +2.140
+  Window 13: 11.18s | 833 samples | Δlogp=+1.821 | queued
+[refinement] window ['x14', 'x15', 'x16'] | MAP logprob = -12734.8168
++100 | eff(%): 11.894 | logl*:   -inf<-12732.9<   inf | logz: -12739.7+/-0.2 | dlogz:    0.0>   0.5                                            [refinement] done | 854 samples | ESS=502.3 | logZ = -12739.75 ± 0.33 | MAP Δlogp = +1.927
+  Window 14: 10.79s | 854 samples | Δlogp=+1.554 | queued
+[refinement] window ['x15', 'x16', 'x17'] | MAP logprob = -12734.8168
++100 | eff(%): 11.606 | logl*:   -inf<-12732.8<   inf | logz: -12739.3+/-0.2 | dlogz:    0.0>   0.5                                            [refinement] done | 828 samples | ESS=445.2 | logZ = -12739.35 ± 0.36 | MAP Δlogp = +2.003
+  Window 15: 11.08s | 828 samples | Δlogp=+2.060 | queued
+[refinement] window ['x16', 'x17', 'x18'] | MAP logprob = -12734.8168
++100 | eff(%): 11.834 | logl*:   -inf<-12734.3<   inf | logz: -12740.6+/-0.2 | dlogz:    0.0>   0.5                                            [refinement] done | 809 samples | ESS=438.1 | logZ = -12740.59 ± 0.36 | MAP Δlogp = +0.556
+  Window 16: 10.33s | 809 samples | Δlogp=+0.747 | queued
+[refinement] window ['x17', 'x18', 'x19'] | MAP logprob = -12734.8168
++100 | eff(%): 11.731 | logl*:   -inf<-12732.4<   inf | logz: -12739.6+/-0.3 | dlogz:    0.0>   0.5                                            [refinement] done | 889 samples | ESS=494.7 | logZ = -12739.59 ± 0.37 | MAP Δlogp = +2.412
+  Window 17: 11.18s | 889 samples | Δlogp=+2.093 | queued
+[refinement] window ['x18', 'x19', 'x20'] | MAP logprob = -12734.8168
++100 | eff(%): 11.907 | logl*:   -inf<-12732.8<   inf | logz: -12739.9+/-0.2 | dlogz:    0.0>   0.5                                            [refinement] done | 876 samples | ESS=481.1 | logZ = -12739.86 ± 0.37 | MAP Δlogp = +1.974
+  Window 18: 11.33s | 876 samples | Δlogp=+1.984 | queued
+[refinement] window ['x19', 'x20', 'x21'] | MAP logprob = -12734.8168
++100 | eff(%): 11.943 | logl*:   -inf<-12732.3<   inf | logz: -12739.1+/-0.2 | dlogz:    0.0>   0.5                                            [refinement] done | 845 samples | ESS=482.5 | logZ = -12739.07 ± 0.35 | MAP Δlogp = +2.490
+  Window 19: 11.38s | 845 samples | Δlogp=+2.135 | queued
+[refinement] window ['x20', 'x21', 'x22'] | MAP logprob = -12734.8168
++100 | eff(%): 11.987 | logl*:   -inf<-12733.8<   inf | logz: -12739.9+/-0.2 | dlogz:    0.0>   0.5                                            [refinement] done | 774 samples | ESS=418.4 | logZ = -12739.86 ± 0.33 | MAP Δlogp = +0.969
+  Window 20: 10.37s | 774 samples | Δlogp=+1.135 | queued
+[refinement] window ['x21', 'x22', 'x23'] | MAP logprob = -12734.8168
++100 | eff(%): 11.994 | logl*:   -inf<-12734.4<   inf | logz: -12740.3+/-0.2 | dlogz:    0.0>   0.5                                            [refinement] done | 767 samples | ESS=400.8 | logZ = -12740.35 ± 0.34 | MAP Δlogp = +0.375
+  Window 21: 10.17s | 767 samples | Δlogp=+0.807 | queued
+[refinement] window ['x22', 'x23', 'x24'] | MAP logprob = -12734.8168
++100 | eff(%): 11.909 | logl*:   -inf<-12734.4<   inf | logz: -12740.3+/-0.2 | dlogz:    0.0>   0.5                                            [refinement] done | 766 samples | ESS=406.1 | logZ = -12740.30 ± 0.35 | MAP Δlogp = +0.413
+  Window 22: 10.45s | 766 samples | Δlogp=+0.759 | queued
+[refinement] window ['x23', 'x24', 'x25'] | MAP logprob = -12734.8168
++100 | eff(%): 11.727 | logl*:   -inf<-12733.1<   inf | logz: -12739.5+/-0.2 | dlogz:    0.0>   0.5                                            [refinement] done | 815 samples | ESS=484.9 | logZ = -12739.50 ± 0.34 | MAP Δlogp = +1.741
+  Window 23: 11.02s | 815 samples | Δlogp=+1.750 | queued
+[refinement] window ['x24', 'x25', 'x26'] | MAP logprob = -12734.8168
++100 | eff(%): 11.975 | logl*:   -inf<-12733.2<   inf | logz: -12739.7+/-0.2 | dlogz:    0.0>   0.5                                            [refinement] done | 821 samples | ESS=484.7 | logZ = -12739.74 ± 0.32 | MAP Δlogp = +1.609
+  Window 24: 10.89s | 821 samples | Δlogp=+1.183 | queued
+[refinement] window ['x25', 'x26', 'x27'] | MAP logprob = -12734.8168
++100 | eff(%): 11.938 | logl*:   -inf<-12733.5<   inf | logz: -12740.2+/-0.2 | dlogz:    0.0>   0.5                                            [refinement] done | 829 samples | ESS=466.1 | logZ = -12740.16 ± 0.32 | MAP Δlogp = +1.269
+  Window 25: 11.09s | 829 samples | Δlogp=+0.998 | queued
+[refinement] window ['x26', 'x27', 'x28'] | MAP logprob = -12734.8168
++100 | eff(%): 11.864 | logl*:   -inf<-12734.1<   inf | logz: -12740.2+/-0.2 | dlogz:    0.0>   0.5                                            [refinement] done | 781 samples | ESS=417.5 | logZ = -12740.19 ± 0.35 | MAP Δlogp = +0.675
+  Window 26: 10.41s | 781 samples | Δlogp=+1.044 | queued
+[refinement] window ['x27', 'x28', 'x29'] | MAP logprob = -12734.8168
++100 | eff(%): 12.050 | logl*:   -inf<-12733.4<   inf | logz: -12739.1+/-0.2 | dlogz:    0.0>   0.5                                            [refinement] done | 746 samples | ESS=410.7 | logZ = -12739.14 ± 0.33 | MAP Δlogp = +1.391
+  Window 27: 9.79s | 746 samples | Δlogp=+1.762 | queued
+
+noise=0.3
+Pose RMSE:      3.8054 m
+Landmark RMSE:  2.9070 m
+Mean NEES:      454.137  (consistent ≈ 2.0)
+Triggers:       22 / 28
+True failures:  26 / 28
+Precision:      1.000
+Recall:         0.846
+Gaussian SLAM:  0.017s
+Refinement:     244.55s total | 11.12s/window | 22 windows
+Total:          244.57s
+
+=== Experiment 2: loop closure ambiguity ===
+Score range: min=2.933  max=4.231  mean=3.632
+[refinement] window ['x12', 'x13', 'x14'] | MAP logprob = -133.4570
++200 | eff(%): 11.461 | logl*:   -inf<-133.8<   inf | logz: -151.0+/-0.3 | dlogz:    0.0>   0.5                                                [refinement] done | 3766 samples | ESS=1294.5 | logZ = -151.04 ± 0.41 | MAP Δlogp = -0.385
+  Window 12: 28.67s | 3766 samples | Δlogp=-0.021 | kept MAP
+[refinement] window ['x13', 'x14', 'x15'] | MAP logprob = -133.4570
++200 | eff(%): 11.462 | logl*:   -inf<-134.2<   inf | logz: -151.5+/-0.3 | dlogz:    0.0>   0.5                                                [refinement] done | 3785 samples | ESS=1274.4 | logZ = -151.50 ± 0.44 | MAP Δlogp = -0.771
+  Window 13: 32.44s | 3785 samples | Δlogp=-0.002 | kept MAP
+[refinement] window ['x14', 'x15', 'x16'] | MAP logprob = -133.4570
++200 | eff(%): 11.465 | logl*:   -inf<-134.2<   inf | logz: -151.7+/-0.3 | dlogz:    0.0>   0.5                                                [refinement] done | 3831 samples | ESS=1229.9 | logZ = -151.68 ± 0.45 | MAP Δlogp = -0.731
+  Window 14: 29.10s | 3831 samples | Δlogp=-0.015 | kept MAP
+[refinement] window ['x15', 'x16', 'x17'] | MAP logprob = -133.4570
++200 | eff(%): 11.461 | logl*:   -inf<-134.0<   inf | logz: -151.8+/-0.3 | dlogz:    0.0>   0.5                                                [refinement] done | 3874 samples | ESS=1293.4 | logZ = -151.76 ± 0.44 | MAP Δlogp = -0.579
+  Window 15: 29.33s | 3874 samples | Δlogp=-0.015 | kept MAP
+[refinement] window ['x16', 'x17', 'x18'] | MAP logprob = -133.4570
++200 | eff(%): 11.472 | logl*:   -inf<-134.3<   inf | logz: -151.4+/-0.3 | dlogz:    0.0>   0.5                                                [refinement] done | 3754 samples | ESS=1200.0 | logZ = -151.39 ± 0.44 | MAP Δlogp = -0.839
+  Window 16: 28.52s | 3754 samples | Δlogp=-0.031 | kept MAP
+[refinement] window ['x17', 'x18', 'x19'] | MAP logprob = -133.4570
++200 | eff(%): 11.476 | logl*:   -inf<-134.2<   inf | logz: -151.3+/-0.3 | dlogz:    0.0>   0.5                                                [refinement] done | 3765 samples | ESS=1230.1 | logZ = -151.33 ± 0.43 | MAP Δlogp = -0.724
+  Window 17: 30.67s | 3765 samples | Δlogp=-0.022 | kept MAP
+[refinement] window ['x18', 'x19', 'x20'] | MAP logprob = -133.4570
++200 | eff(%): 11.459 | logl*:   -inf<-134.2<   inf | logz: -151.7+/-0.3 | dlogz:    0.0>   0.5                                                [refinement] done | 3834 samples | ESS=1242.1 | logZ = -151.71 ± 0.44 | MAP Δlogp = -0.752
+  Window 18: 29.44s | 3834 samples | Δlogp=-0.004 | kept MAP
+[refinement] window ['x19', 'x20', 'x21'] | MAP logprob = -133.4570
++200 | eff(%): 11.450 | logl*:   -inf<-134.2<   inf | logz: -152.2+/-0.3 | dlogz:    0.0>   0.5                               [refinement] done | 3935 samples | ESS=1251.8 | logZ = -152.21 ± 0.45 | MAP Δlogp = -0.751
+  Window 19: 29.50s | 3935 samples | Δlogp=+0.005 | queued
+[refinement] window ['x20', 'x21', 'x22'] | MAP logprob = -133.4570
++200 | eff(%): 11.404 | logl*:   -inf<-133.8<   inf | logz: -152.3+/-0.3 | dlogz:    0.0>   0.5                               [refinement] done | 4039 samples | ESS=1255.2 | logZ = -152.33 ± 0.43 | MAP Δlogp = -0.312
+  Window 20: 31.11s | 4039 samples | Δlogp=+0.007 | queued
+[refinement] window ['x21', 'x22', 'x23'] | MAP logprob = -133.4570
++200 | eff(%): 11.430 | logl*:   -inf<-134.1<   inf | logz: -152.3+/-0.3 | dlogz:    0.0>   0.5                               [refinement] done | 3966 samples | ESS=1291.6 | logZ = -152.27 ± 0.44 | MAP Δlogp = -0.623
+  Window 21: 29.80s | 3966 samples | Δlogp=-0.022 | kept MAP
+[refinement] window ['x22', 'x23', 'x24'] | MAP logprob = -133.4570
++200 | eff(%): 11.491 | logl*:   -inf<-134.0<   inf | logz: -151.3+/-0.3 | dlogz:    0.0>   0.5                               [refinement] done | 3799 samples | ESS=1285.1 | logZ = -151.35 ± 0.42 | MAP Δlogp = -0.531
+  Window 22: 28.96s | 3799 samples | Δlogp=-0.008 | kept MAP
+[refinement] window ['x23', 'x24', 'x25'] | MAP logprob = -133.4570
++200 | eff(%): 11.474 | logl*:   -inf<-134.2<   inf | logz: -151.7+/-0.3 | dlogz:    0.0>   0.5                               [refinement] done | 3828 samples | ESS=1213.7 | logZ = -151.69 ± 0.45 | MAP Δlogp = -0.756
+  Window 23: 28.53s | 3828 samples | Δlogp=-0.003 | kept MAP
+[refinement] window ['x24', 'x25', 'x26'] | MAP logprob = -133.4570
++200 | eff(%): 11.457 | logl*:   -inf<-133.8<   inf | logz: -151.6+/-0.3 | dlogz:    0.0>   0.5                               [refinement] done | 3889 samples | ESS=1304.4 | logZ = -151.62 ± 0.43 | MAP Δlogp = -0.350
+  Window 24: 29.00s | 3889 samples | Δlogp=-0.011 | kept MAP
+[refinement] window ['x25', 'x26', 'x27'] | MAP logprob = -133.4570
++200 | eff(%): 11.439 | logl*:   -inf<-134.4<   inf | logz: -152.0+/-0.3 | dlogz:    0.0>   0.5                               [refinement] done | 3850 samples | ESS=1240.9 | logZ = -152.00 ± 0.44 | MAP Δlogp = -0.975
+  Window 25: 28.32s | 3850 samples | Δlogp=-0.018 | kept MAP
+[refinement] window ['x26', 'x27', 'x28'] | MAP logprob = -133.4570
++200 | eff(%): 11.454 | logl*:   -inf<-134.3<   inf | logz: -152.0+/-0.3 | dlogz:    0.0>   0.5                               [refinement] done | 3884 samples | ESS=1222.9 | logZ = -152.04 ± 0.45 | MAP Δlogp = -0.839
+  Window 26: 28.50s | 3884 samples | Δlogp=-0.012 | kept MAP
+[refinement] window ['x27', 'x28', 'x29'] | MAP logprob = -133.4570
++200 | eff(%): 11.464 | logl*:   -inf<-134.2<   inf | logz: -151.7+/-0.3 | dlogz:    0.0>   0.5                               [refinement] done | 3821 samples | ESS=1161.9 | logZ = -151.67 ± 0.45 | MAP Δlogp = -0.789
+  Window 27: 28.05s | 3821 samples | Δlogp=-0.007 | kept MAP
+[refinement] window ['x28', 'x29', 'x30'] | MAP logprob = -133.4570
++200 | eff(%): 11.434 | logl*:   -inf<-134.3<   inf | logz: -152.7+/-0.3 | dlogz:    0.0>   0.5                               [refinement] done | 4007 samples | ESS=1248.3 | logZ = -152.67 ± 0.46 | MAP Δlogp = -0.855
+  Window 28: 29.80s | 4007 samples | Δlogp=+0.027 | queued
+[refinement] window ['x29', 'x30', 'x31'] | MAP logprob = -133.4570
++200 | eff(%): 11.452 | logl*:   -inf<-133.9<   inf | logz: -152.5+/-0.3 | dlogz:    0.0>   0.5                               [refinement] done | 4051 samples | ESS=1243.6 | logZ = -152.52 ± 0.45 | MAP Δlogp = -0.464
+  Window 29: 30.12s | 4051 samples | Δlogp=+0.063 | queued
+[refinement] window ['x30', 'x31', 'x32'] | MAP logprob = -133.4570
++200 | eff(%): 11.398 | logl*:   -inf<-133.9<   inf | logz: -152.6+/-0.3 | dlogz:    0.0>   0.5                               [refinement] done | 4067 samples | ESS=1341.8 | logZ = -152.60 ± 0.44 | MAP Δlogp = -0.443
+  Window 30: 47.09s | 4067 samples | Δlogp=+0.030 | queued
+[refinement] window ['x31', 'x32', 'x33'] | MAP logprob = -133.4570
++200 | eff(%): 11.433 | logl*:   -inf<-134.2<   inf | logz: -152.8+/-0.3 | dlogz:    0.0>   0.5                               [refinement] done | 4046 samples | ESS=1233.9 | logZ = -152.80 ± 0.46 | MAP Δlogp = -0.789
+  Window 31: 29.88s | 4046 samples | Δlogp=-0.019 | kept MAP
+[refinement] window ['x32', 'x33', 'x34'] | MAP logprob = -133.4570
++200 | eff(%): 11.420 | logl*:   -inf<-134.3<   inf | logz: -152.6+/-0.3 | dlogz:    0.0>   0.5                               [refinement] done | 3999 samples | ESS=1263.7 | logZ = -152.59 ± 0.46 | MAP Δlogp = -0.805
+  Window 32: 31.93s | 3999 samples | Δlogp=-0.012 | kept MAP
+[refinement] window ['x33', 'x34', 'x35'] | MAP logprob = -133.4570
++200 | eff(%): 11.445 | logl*:   -inf<-134.4<   inf | logz: -152.6+/-0.3 | dlogz:    0.0>   0.5                               [refinement] done | 3983 samples | ESS=1154.0 | logZ = -152.60 ± 0.47 | MAP Δlogp = -0.924
+  Window 33: 42.41s | 3983 samples | Δlogp=-0.007 | kept MAP
+[refinement] window ['x34', 'x35', 'x36'] | MAP logprob = -133.4570
+eff(%): 10.701 | logl*:   -inf<-145.6<   inf | logz: -158.2+/-0.2 | dlogz:    9.5>   0.5                                      ^CException while calling prior_transform function:
